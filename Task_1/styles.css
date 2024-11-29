@@ -33,39 +33,85 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 8px;
   padding: 40px;
 }
 
 .navbar-links {
-  list-style: none;
-  margin: 40px;
-  padding: 40px;
+  width: 100%;
   display: flex;
-  position: absolute;
-  right: 0;
-  gap: 100px;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  gap: 50px;
 }
+
 .navbar-links li {
-  margin: 0;
+  height: 50px;
 }
-.navbar-links li a:hover {
-  color: aliceblue;
-}
+
 .navbar-links a {
-  color: var(--lavender);
+  height: 100%;
+  padding: 0 30px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--lavender);
   transition: color 0.1s;
   text-align: center;
   font-family: "Pixelify Sans";
-  font-size: 25px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 50px;
+}
+
+.navbar-links li a:hover {
+  color: aliceblue;
+}
+
+.menu-icon{
+  height: 50px;
+  width: 50px;
+}
+
+.menu-button{
+  display: none;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.251);
+  backdrop-filter: blur(7px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@media(max-width: 800px)
+{
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+
+@media(max-width:400px)
+{
+  .sidebar{
+    width: 100%;
+  }
 }
 
 .about h1 {
@@ -551,6 +597,10 @@ footer {
 .foot #love {
   color: red;
   font-size: larger;
+}
+.foot img{
+  height: 5vh;
+  width: 5wh;
 }
 
 html,

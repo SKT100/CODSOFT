@@ -12,11 +12,18 @@
     <body>
         <header>
 
-            <nav class="navbar" id="home">
+            <nav class="navbar">
+                <ul class="sidebar">
+                    <li onclick=hideSideBar()><a href="#"><img src="assets/cross-icon.png" height="50px" width="50px" alt="close-img"></a></li>
+                    <li><a href="#home"><img src="assets/home.png" alt="home-img"></a></li>
+                    <li><a href="#about"><img src="assets/about.png" alt="about-img"></a></li>
+                    <li><a href="#contact"><img src="assets/contact.png" alt="contact-img"></a></li>
+                </ul>
                 <ul class="navbar-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="hideOnMobile"><a href="#home">Home</a></li>
+                    <li class="hideOnMobile"><a href="#about">About</a></li>
+                    <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+                    <li class="menu-button" onclick=showSideBar()><a href="#"><img src="assets/menu-planet.png" alt="menu-icon" class="menu-icon"></a></li>
                 </ul>
             </nav>
 
@@ -200,7 +207,7 @@
         <footer>
             <div class="foot">
                 <p>&copy;2024 Saikat. All rights reserved.</p>
-                <p>Made with <span id="love">♥</span></p>
+                <p>Made with <span id="love"><img src="assets/heart pixel.png" alt="love"></span></p>
             </div>
         </footer>
 
