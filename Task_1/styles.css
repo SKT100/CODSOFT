@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+:root {
+  --dark-violet: #494063;
+  --grey-violet: #9289a0;
+  --lavender: #b390ed;
+  --yellow: #f1cd3f;
+  --light-blue: #65c9ff;
+  --black: #211823;
+  --black-2: #121212;
+  --light-lavender: #c8ccff;
+  --dark-blue: #1a1e53;
+  --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url(assets/bg.jpg);
+  font-family: Sometype Mono;
+  color: var(--yellow);
+  scroll-behavior: auto; /* Let Lenis handle the scroll behavior */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding: 40px;
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 40px;
+  padding: 40px;
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 100px;
+}
+.navbar-links li {
+  margin: 0;
+}
+.navbar-links li a:hover {
+  color: aliceblue;
+}
+.navbar-links a {
+  color: var(--lavender);
+  text-decoration: none;
+  transition: color 0.1s;
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 50px;
+}
+
+.about h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Jersey 15";
+  margin-top: 160px;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* letter-glow */
+.about span {
+  color: var(--yellow);
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.162),
+    0 0 10px rgba(255, 255, 0, 0.156), 0 0 20px rgba(255, 255, 0, 0.093),
+    0 0 30px rgba(255, 255, 0, 0.099), 0 0 40px rgba(255, 255, 0, 0.51);
+}
+/* hover-glow effect */
+.about span:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.351),
+    0 0 10px rgba(255, 255, 0, 0.334), 0 0 20px rgba(255, 255, 0, 0.274),
+    0 0 30px rgba(255, 255, 0, 0.296), 0 0 40px rgba(255, 255, 0, 0.466);
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+.about span {
+  transition: text-shadow 0.5s ease-in-out; /* Slow fade-out after hover */
+}
+
+.about h5 {
+  text-align: center;
+  font-family: "Sometype Mono";
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--lavender);
+}
+
+.about_me {
+  margin-top: 270px;
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.avatar_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 339px;
+  height: 334px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  background-color: var(--dark-violet);
+}
+
+.avatar_container img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.avatar_container img:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.about_me p {
+  width: 740px;
+  height: 344px;
+  padding-top: 50px;
+  text-align: justify;
+  font-family: "Sometype Mono";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.skill {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 436px;
+  padding: 120px 30px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 536.704px;
+}
+
+.skill #heading_skill {
+  color: var(--white);
+  font-family: "Jersey 15";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.skill_lev {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  gap: 20px; /* Space between items */
+}
+
+.skill ul {
+  width: 536.704px;
+  list-style-type: none;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  object-fit: fill;
+}
+
+.skill-logo {
+  width: 140px;
+  height: 123px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-logo:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+}
+
+.skill-progress {
+  width: 686.68px;
+  height: 38.6px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-progress:hover {
+  transform: scale(1.03);
+}
+
+.skill-level {
+  color: #fff;
+  text-align: center;
+  font-family: "Jersey 15";
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 11.1px;
+}
+
+.project {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 0;
+  padding: -50px 30px 80px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.project #heading-project {
+  color: var(--white);
+  font-family: "Jersey 15", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.proj-set {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.proj-set ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.proj-set li {
+  flex: 1; /* Allow items to flex and align properly */
+}
+
+.project-item {
+  position: relative; /* Enable positioning for child elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.project img {
+  width: 325.751px;
+  height: auto;
+  object-fit: cover;
+  position: relative; /* Ensures the image remains in the base layer */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project img:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.project-item .title-overlay {
+  position: absolute; /* Place text over the image */
+  top: 24%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Fine-tune centering */
+  color: var(--black-2); /* Text color */
+  font-family: "Pixelify Sans", sans-serif; /* Match your theme */
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none; /* Prevent interaction with the title */
+}
+.project-item .kk {
+  top: 27%;
+}
+
+.project-item .description {
+  width: 100%;
+  text-align: center;
+}
+
+.project-item .description p {
+  color: var(--yellow);
+  font-family: "Sometype Mono";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.resume {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 212px;
+  padding: -50px 30px 80px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume #resume-heading {
+  width: 455.555px;
+  color: var(--white);
+  font-family: "Jersey 15";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+.resume-content {
+  position: relative;
+  margin: 36px 400px 20px 435px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resume-content img:hover {
+  transform: scale(1.1);
+}
+
+.resume-content p {
+  text-align: justify;
+}
+
+.start {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  font-family: "Jersey 15";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.des {
+  margin-top: 20px;
+  pointer-events: none;
+}
+
+.contact {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 212px;
+  padding: -50px 30px 80px 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.contact #contact-heading {
+  text-align: left;
+  color: var(--white);
+  font-family: "Jersey 15";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contact-form {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 35%;
+  top: 50%;
+  color: #000;
+  font-family: "Jersey 10";
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: left;
+  width: 296px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 530%;
+}
+
+.form-group label {
+  margin-right: 10px; /* Add some space between the label and the input */
+  min-width: 83px;
+}
+
+.form-group input {
+  flex-grow: 1; /* Input takes remaining space */
+  padding: 5px;
+  font-size: 20px;
+  width: 500px;
+  height: 42px;
+}
+
+form {
+  width: 150px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add spacing between fields */
+  align-items: center;
+  margin-left: 250px;
+}
+
+form label {
+  font-size: 42px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid var(--lavender);
+  background-color: var(--white);
+  color: var(--dark-violet);
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+textarea {
+  width: 765px;
+  height: 172px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--grey-violet);
+  font-size: 18px; /* Match the input font size */
+  letter-spacing: 1px; /* Match the input text spacing */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--dark-violet); /* Glow effect on focus */
+  box-shadow: 0 0 10px var(--dark-violet);
+}
+
+form input[type="submit"]:hover {
+  background-color: rgba(22, 195, 131, 0.23); /* Change hover color */
+  color: white;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+
+.links a img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.links a img:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon */
+}
+
+footer {
+  background-color: var(--dark-violet);
+  height: 81px;
+  margin-top: 86px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 25px;
+}
+
+.foot p {
+  color: var(--grey-violet);
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.foot #love {
+  color: red;
+  font-size: larger;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Align elements in a column */
+}
+
+main {
+  flex: 1; /* This will make the main content area expand to take up remaining space */
+}
+
