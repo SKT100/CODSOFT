@@ -1,7 +1,11 @@
+/*-------<font-styles-imported>------*/
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
 
+
+
+/*-----<color-variables>-------*/
 :root {
   --dark-violet: #494063;
   --grey-violet: #9289a0;
@@ -14,10 +18,13 @@
   --dark-blue: #1a1e53;
   --white: #fff;
 }
+
+
 * {
   margin: 0;
   padding: 0;
 }
+
 
 .html,
 body {
@@ -29,9 +36,12 @@ body {
   background-image: url(assets/bg.jpg);
   font-family: Sometype Mono;
   color: var(--yellow);
-  scroll-behavior: auto; /* Let Lenis handle the scroll behavior */
+  scroll-behavior: auto; /*Lenis handle the scroll behavior */
 }
 
+
+
+/*---------<navbar-section>----------*/
 .navbar {
   padding: 40px;
 }
@@ -97,23 +107,9 @@ body {
   list-style-type: none;
 }
 
-@media(max-width: 800px)
-{
-  .hideOnMobile{
-    display: none;
-  }
-  .menu-button{
-    display: block;
-  }
-}
 
-@media(max-width:400px)
-{
-  .sidebar{
-    width: 100%;
-  }
-}
 
+/* about-section */
 .about h1 {
   color: #fff;
   text-align: center;
@@ -610,8 +606,3 @@ body {
   display: flex;
   flex-direction: column; /* Align elements in a column */
 }
-
-main {
-  flex: 1; /* This will make the main content area expand to take up remaining space */
-}
-
