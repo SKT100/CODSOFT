@@ -23,6 +23,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -35,41 +36,43 @@ body {
 body {
   background-image: url(assets/bg.jpg);
   font-family: Sometype Mono;
-  color: var(--yellow);
-  scroll-behavior: auto; /*Lenis handle the scroll behavior */
+  scroll-behavior: auto; /*Lenis handles the scroll behavior */
 }
+
 
 
 
 /*---------<navbar-section>----------*/
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
   padding: 40px;
 }
 
 .navbar-links {
-  width: 100%;
+  list-style: none;
+  margin: 40px;
+  padding: 40px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  list-style-type: none;
-  gap: 50px;
+  position: absolute;
+  right: 0;
+  gap: 100px;
 }
-
 .navbar-links li {
-  height: 50px;
+  margin: 0;
 }
-
+.navbar-links li a:hover {
+  color: aliceblue;
+}
 .navbar-links a {
-  height: 100%;
-  padding: 0 30px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
   color: var(--lavender);
+  text-decoration: none;
   transition: color 0.1s;
   text-align: center;
   font-family: "Pixelify Sans";
-  font-size: 30px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -593,10 +596,6 @@ footer {
 .foot #love {
   color: red;
   font-size: larger;
-}
-.foot img{
-  height: 5vh;
-  width: 5wh;
 }
 
 html,
