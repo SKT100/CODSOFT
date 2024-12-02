@@ -7,18 +7,21 @@
         <title>PORTFOLIO_SAIKAT</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+        <script src="https://kit.fontawesome.com/f6efa00d5d.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <header>
+        <header id="home">
 
-            <nav class="navbar" id="home">
-                <ul class="navbar-links">
-                    <li class="hideOnMobile"><a href="#home">Home</a></li>
-                    <li class="hideOnMobile"><a href="#about">About</a></li>
-                    <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+            <nav class="navbar">
+                <ul id="sidemenu">
+                    <li class="nav-icon cross-icon"><a onclick=closeMenu() href="#"><img src="assets/cross-icon.png"
+                    alt="cross-icon" height="30px" width="30px"></a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <li class="menu-button" onclick=showSideBar()><a href="#"><img src="assets/menu-planet.png" alt="menu-icon" class="menu-icon"></a></li>
+                <img class="nav-icon menu-icon" src="assets/menu-planet.png" height="50px" width="50px" alt="menu-icon" onclick=openMenu()>
             </nav>
 
             <br><br><br>
@@ -35,14 +38,12 @@
                     <div class="avatar_container">
                         <img id="avatar" src="assets/pixel-avatar.png" alt="avatar">
                     </div>
-                    <div class="para_container">
-    
-                    </div>
-                    <p>Hi! I'm a passionate front-end developer building creative web solutions. Let's make the web fun and
+                    <p>Hi! I'm a passionate front-end developer building creative web solutions. Let's make the web fun
+                        and
                         interactive!</p>
                 </div>
             </section>
-            
+
 
             <section>
                 <div class="skill">
@@ -76,64 +77,46 @@
                     </div>
                 </div>
             </section>
-            
+
 
             <section>
                 <div class="project">
-                    <span id="heading-project">
-                        <h3>Projects...</h3>
-                    </span>
-                    <div class="proj-set">
-                        <ul>
-                            <li>
-                                <div class="project-item">
-                                    <img src="assets/tv-monitor.jpg" alt="project1">
-                                    <div class="description">
-                                        <div class="title-overlay">
-                                            <h4>Portfolio Website</h4>
-                                        </div>
-    
-                                        <p>A personal portfolio website designed to showcase my skills and projects in a
-                                            retro game style. Built with HTML, CSS, and JavaScript, it features a responsive
-                                            layout, glowing buttons, and pixelated animations for an immersive user
-                                            experience
-                                        </p>
-                                    </div>
-                            </li>
-                            <li>
-                                <div class="project-item">
-                                    <img src="assets/tv-monitor.jpg" alt="project2">
-                                    <div class="description">
-                                        <div class="title-overlay">
-                                            <h4>Landing Page</h4>
-                                        </div>
-    
-                                        <p>A visually appealing landing page designed to promote a fictional product or
-                                            service. This project focuses on clean layout, interactive hover effects, and
-                                            call-to-action elements to maximize user engagement.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="project-item">
-                                    <img src="assets/tv-monitor.jpg" alt="project3">
-                                    <div class="description">
-                                        <div class="title-overlay kk">
-                                            <h4>Calculator Web App</h4>
-                                        </div>
-    
-                                        <p>A fully functional calculator app styled with retro aesthetics. Built for web
-                                            browsers, it supports basic arithmetic operations and showcases interactive
-                                            button designs with pixelated effects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                  <span id="heading-project">
+                    <h3>Projects...</h3>
+                  </span>
+                  <div class="proj-set">
+                    <!-- Each project-item is a direct child of proj-set -->
+                    <div class="project-item">
+                      <img src="assets/tv-monitor.jpg" alt="project1">
+                      <div class="description">
+                        <div class="title-overlay">
+                          <h4>Portfolio Website</h4>
+                        </div>
+                        <p>A personal portfolio website designed to showcase my skills and projects...</p>
+                      </div>
                     </div>
+                    <div class="project-item">
+                      <img src="assets/tv-monitor.jpg" alt="project2">
+                      <div class="description">
+                        <div class="title-overlay">
+                          <h4>Landing Page</h4>
+                        </div>
+                        <p>A visually appealing landing page designed to promote a fictional product...</p>
+                      </div>
+                    </div>
+                    <div class="project-item">
+                      <img src="assets/tv-monitor.jpg" alt="project3">
+                      <div class="description">
+                        <div class="title-overlay">
+                          <h4>Calculator Web App</h4>
+                        </div>
+                        <p>A fully functional calculator app styled with retro aesthetics...</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
+              </section>
+              
 
 
             <section>
@@ -142,7 +125,7 @@
                         <h3>Resume...</h3>
                     </span>
                     <div class="resume-content">
-                        <a href="https://drive.google.com/file/d/17_YTJppeF-da0npEI5Jd1Q5w4Qr3bcYL/view?usp=sharing" target="_blank">
+                        <a href="assets/Saikat Dutta(RESUME OCT UPDATE).pdf" download>
                             <div class="resume-link">
                                 <img src="assets/dark_button.svg" alt="button">
                                 <span class="start">
@@ -163,36 +146,47 @@
                         <h3>Contact me...</h3>
                     </span>
                     <div class="contact-form">
-                        <div class="img">
+                        
+                        <!-- image-part -->
+                        <div class="image">
                             <img src="assets/form-bg.png" alt="form-background">
                         </div>
+
+
+                        <!-- form-part  -->
                         <div class="form-content">
-                            <form action="" method="get">
+                            <form name="submit-to-google-sheet">
                                 <div class="form-group">
                                     <label for="name">Name:</label>
-                                    <input type="text" id="name" name="name" placeholder="Your Name" />
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required />
                                 </div>
-    
+
                                 <div class="form-group">
                                     <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email" placeholder="Your e-mail id" />
+                                    <input type="email" id="email" name="email" placeholder="Your e-mail id" required />
                                 </div>
-    
-                                <div>
+
+                                <div class="comm">
                                     <label for="comment">Comment:</label>
-                                    <textarea id="comment" name="w3review" placeholder="Your Message"></textarea>
+                                    <textarea id="comment" name="comment" placeholder="Your Message"></textarea>
                                 </div>
-                                <div>
+                                <div class="btn_submit">
                                     <input type="submit" name="submit" value="Submit">
                                 </div>
                             </form>
+                            <span id="msg"></span>
                         </div>
-    
+
+                        
+
                     </div>
                     <div class="links">
-                        <a href="https://github.com/SKT100" target="_blank"><img src="assets/github-icon.png" alt="github"></a>
-                        <a href="https://www.instagram.com/psyc_a_t" target="_blank"><img src="assets/ig-icon.png" alt="instagram"></a>
-                        <a href="https://www.linkedin.com/in/saikat-dutta-workprofile/" target="_blank"><img src="assets/ln-icon.png" alt="linkedin"></a>
+                        <a href="https://github.com/SKT100" target="_blank"><img src="assets/github-icon.png"
+                                alt="github"></a>
+                        <a href="https://www.instagram.com/psyc_a_t" target="_blank"><img src="assets/ig-icon.png"
+                                alt="instagram"></a>
+                        <a href="https://www.linkedin.com/in/saikat-dutta-workprofile/" target="_blank"><img
+                                src="assets/ln-icon.png" alt="linkedin"></a>
                     </div>
                 </div>
             </section>
@@ -201,7 +195,7 @@
         <footer>
             <div class="foot">
                 <p>&copy;2024 Saikat. All rights reserved.</p>
-                <p>Made with <span id="love">♥</span></p>
+                <p>Made with <i class="fa-solid fa-heart" style="color: #ff0000;"></i></p>
             </div>
         </footer>
 
