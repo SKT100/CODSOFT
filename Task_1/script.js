@@ -41,22 +41,27 @@ function closeMenu(){
 
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzcqpNqCJAHW-GLg8rlbjVSdz5-on_EwIyaErEKwxp-gc2Te__7DP6lg2sPGX4T172K4w/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg= document.getElementById("msg")
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => 
-      {
-        msg.innerHTML="Form submitted successfully!"
-        setTimeout(function() {
-          msg.innerHTML=""
-        },1000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzcqpNqCJAHW-GLg8rlbjVSdz5-on_EwIyaErEKwxp-gc2Te__7DP6lg2sPGX4T172K4w/exec';
+const form = document.forms['submit-to-google-sheet'];
+const submitButton = document.getElementById("submit-button");
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      // Change the button text and style
+      submitButton.value = "Sent!!";
+      submitButton.classList.add("sent");
+      
+      // Reset form and revert button after a short delay
+      setTimeout(() => {
+        submitButton.value = "Submit"; // Revert to original text
+        submitButton.classList.remove("sent"); // Revert to original style
+        form.reset(); // Clear the form
+      }, 2000);
+    })
+    .catch(error => console.error('Error!', error.message));
+});
 
   window.addEventListener('scroll', function () {
     const scrollPosition = window.scrollY; // Get the scroll position

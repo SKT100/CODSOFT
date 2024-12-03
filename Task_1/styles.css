@@ -535,18 +535,23 @@ textarea:focus {
 }
 
 /* Submit Button */
-form input[type="submit"] {
-  background-color: var(--dark-violet);
-  color: var(--white);
+#submit-button {
+  background-color: var(--dark-violet); /* Original background */
+  color: white;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
-form input[type="submit"]:hover {
+#submit-button.sent {
+  background-color: green; /* Sent state background */
+  color: white;
+}
+
+#submit-button:hover {
   background-color: rgba(22, 195, 131, 0.23);
   color: white;
 }
@@ -568,16 +573,6 @@ form input[type="submit"]:hover {
 
 .links a img:hover {
   transform: scale(1.1); /* Slightly enlarges the icon */
-}
-
-#msg {
-  position: absolute;
-  color: rgb(17, 180, 17);
-  margin-top: 37px;
-  margin-left: 40%;
-  display: block;
-  font-size: 20px;
-  font-family: "Pixelify Sans";
 }
 
 /* ----------------<footer-section>---------------- */
