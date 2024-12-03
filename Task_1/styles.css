@@ -36,6 +36,11 @@ body {
   font-family: Sometype Mono;
   color: var(--yellow);
   scroll-behavior: auto; /* Let Lenis handle the scroll behavior */
+  background-image: url("assets/bg.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center; /* Start the background in the center */
+  transition: background-position 0.3s ease-out; /* Smooth background movement */
 }
 
 /*---------<navbar-section>----------*/
@@ -52,7 +57,7 @@ body {
   display: inline-block;
   margin: 10px 20px;
 }
-.navbar ul :first-child{
+.navbar ul :first-child {
   margin-bottom: 50px;
 }
 
@@ -87,7 +92,7 @@ body {
 /* -----------<name-section>------------- */
 
 .about {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .about h1 {
   color: #fff;
@@ -131,7 +136,7 @@ body {
 /* ---------------<about-me-section>---------------- */
 
 .about_me {
-  margin-top: 30%;
+  margin-top: 20%;
   padding: 120px;
   display: flex;
   flex-direction: column;
@@ -181,7 +186,7 @@ body {
 .skill {
   width: 100%;
   margin: auto;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 30%;
   padding: 30px 10%;
   box-sizing: border-box;
@@ -237,7 +242,7 @@ body {
 }
 
 .skill-progress {
-  width:100%;
+  width: 100%;
   height: 39px;
   flex-shrink: 0;
   transition: transform 0.3s ease-in-out;
@@ -256,7 +261,7 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 11.1px;
-  display: inline-block; 
+  display: inline-block;
   white-space: nowrap;
 }
 
@@ -264,7 +269,7 @@ body {
 
 .project {
   padding: 30px 10%;
-  margin-top: 10%;
+  margin-top: -8%;
 }
 
 .project #heading-project {
@@ -331,13 +336,14 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: 5%;
 }
 
 /* ----------------<resume-section>---------------- */
 .resume {
   width: 100%;
   margin: auto;
-  margin-top: 20%;
+  margin-top: 12%;
   margin-bottom: 10%;
   padding: 30px 10%;
   box-sizing: border-box;
@@ -367,7 +373,7 @@ body {
   justify-content: center;
 }
 
-.resume-content img{
+.resume-content img {
   max-width: 100%; /* Ensure image scales within its container */
   max-height: 100%; /* Maintain aspect ratio */
   object-fit: contain; /* Fit image within the container */
@@ -403,9 +409,7 @@ body {
 /* ------------<contact-section>------------ */
 .contact {
   width: 100%;
-  margin: auto;
-  margin-top: 20%;
-  margin-bottom: 10%;
+  margin: 10% auto;
   padding: 30px 10%;
   display: flex;
   flex-direction: column;
@@ -417,144 +421,135 @@ body {
   color: var(--white);
   font-family: "Jersey 15";
   font-size: 80px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   margin-bottom: 20px;
 }
 
+/* Contact Form Container */
 .contact-form {
+  position: relative; /* Positioning for overlapping content */
+  width: 100%;
+  max-width: 900px; /* Limit container width */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9; /* Maintain responsive aspect ratio */
+  overflow: hidden; /* Prevent content overflow */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 20px;
   box-sizing: border-box;
 }
 
+/* Background Image */
 .contact-form .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%; /* Prevent image from exceeding the container's width */
+  position: absolute; /* Ensure image stays behind the form */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .contact-form .image img {
-  max-width: 100%; /* Ensure image scales within its container */
-  max-height: 100%; /* Maintain aspect ratio */
-  object-fit: contain; /* Fit image within the container */
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale image to fit container */
 }
 
+/* Form Content */
 .form-content {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 35%;
-  top: 50%;
-  color: #000;
-  font-family: "Jersey 10";
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: left;
-  width: 72%;
-  margin-left: 14%;
-  max-width: 853px;
-  padding: 20px 0;
+  position: absolute; /* Keep the form layered on the image */
+  z-index: 2;
+  width: 80%; /* Adjust form width for responsiveness */
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Form Layout */
+.form-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between fields */
 }
 
 .form-group {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  width: 100%;
-  justify-content: space-between;
+  flex-direction: column; /* Stack label and input */
+  margin-bottom: 15px;
+}
+
+.comm,
+.btn_submit {
+  display: block;
+}
+
+.comm label{
+  margin-bottom: 5px;
+  color: #000;
+  text-align: left;
+  font-family: "Jersey 15";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .form-group label {
-  margin-right: 10px; /* Add some space between the label and the input */
-  min-width: 83px;
-}
-
-.form-group input {
-  flex-grow: 1; /* Input takes remaining space */
-  padding: 5px;
-  font-size: 20px;
-  width: 500px;
-  height: 42px;
-}
-
-form {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Add spacing between fields */
-  align-items: center;
-}
-
-form label {
-  font-size: 42px;
+  margin-bottom: 5px;
+  color: #000;
+  text-align: left;
+  font-family: "Jersey 15";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px 15px;
-  border: 2px solid var(--lavender);
-  background-color: var(--white);
-  color: var(--dark-violet);
-  font-family: "Pixelify Sans", sans-serif;
-  font-size: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  letter-spacing: 1px;
-  outline: none; /* Remove default outline */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
-}
-.comm {
-  width: 100%;
-  height: auto;
-}
 textarea {
-  width: 97%;
-  height: 172px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--lavender);
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
   resize: none;
+  height: 100px;
 }
 
 input::placeholder,
 textarea::placeholder {
   font-family: "Pixelify Sans", sans-serif;
   color: var(--grey-violet);
-  font-size: 18px; /* Match the input font size */
-  letter-spacing: 1px; /* Match the input text spacing */
+  font-size: 18px;
 }
 
 input:focus,
-textarea:focus,
-select:focus {
-  border-color: var(--dark-violet); /* Glow effect on focus */
+textarea:focus {
+  border-color: var(--dark-violet);
   box-shadow: 0 0 10px var(--dark-violet);
 }
 
+/* Submit Button */
+form input[type="submit"] {
+  background-color: var(--dark-violet);
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 form input[type="submit"]:hover {
-  background-color: rgba(22, 195, 131, 0.23); /* Change hover color */
+  background-color: rgba(22, 195, 131, 0.23);
   color: white;
 }
-
-/* Input Fields and Textarea */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%; /* Prevents overflow beyond the container */
-  max-width: 100%; /* Aligns with the container */
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid var(--dark-violet);
-  border-radius: 5px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
 /* ----------------<link-images>------------ */
 .links {
   display: flex;
@@ -607,12 +602,12 @@ footer {
   font-size: 25px; /* Default font size */
   font-style: normal;
   font-weight: 400;
-  margin: 5px 0;
 }
 
-.foot i {
-  color: red; /* Heart color */
-  font-size: 1.2em; /* Adjust size for smaller elements */
+.love {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 /* ----------------css for small screens-------------- */
@@ -642,7 +637,7 @@ html {
     margin: 25px;
   }
   .navbar ul li a {
-    font-size: 30px;    
+    font-size: 30px;
   }
 
   .navbar .nav-icon {
@@ -765,7 +760,7 @@ html {
   .proj-set {
     grid-template-columns: 1fr; /* Single column layout */
   }
-  .project-item{
+  .project-item {
     height: auto;
     width: 70vw;
   }
@@ -781,35 +776,37 @@ html {
 }
 
 /* contact-section */
-@media (max-width: 1200px) {
-  form {
-    width: 100%; /* Maximize space usage on very small screens */
-    padding: 20px 20px 20px 20px;
-    gap: 8px; /* Reduce gap for smaller screens */
-  }
-  input,
-  textarea {
-    font-size: 12px;
-    padding: 6px 10px;
+@media (max-width: 768px) {
+  .contact-form {
+    aspect-ratio: auto; /* Allow height to grow based on content */
+    min-height: 600px; /* Adjust height for better visibility */
   }
 
-  form input[type="submit"] {
-    font-size: 12px;
-    padding: 6px 12px;
+  .contact-form .image {
+    height: 110%; /* Slightly increase image height */
+  }
+
+  /* Adjust Form Layout */
+  .form-content form {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping into two columns */
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .form-group {
+    flex: 1 1 48%; /* Make Name and Email fields share a row */
+  }
+
+  .comm,
+  .btn_submit {
+    flex: 1 1 100%; /* Full width for Comment and Submit button */
   }
 
   .links{
     display: flex;
-    flex-direction: column;
+    justify-content: baseline;
     align-items: center;
-    justify-content: center;
-    margin-top: 25%;
+    flex-wrap: wrap;
   }
-  .links a img{
-    height: 90px;
-    width: auto;
-  }
-  
 }
-
-

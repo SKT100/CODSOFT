@@ -58,4 +58,11 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzcqpNqCJAHW-GLg8rlbj
       .catch(error => console.error('Error!', error.message))
   })
 
+  window.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY; // Get the scroll position
+    const starSpeed = 0.2; // Adjust this value to control the star movement speed
+  
+    // Move the stars in the opposite direction of the scroll
+    document.body.style.backgroundPosition = `center ${-scrollPosition * starSpeed}px`;
+  });
   
