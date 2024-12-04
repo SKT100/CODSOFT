@@ -96,29 +96,31 @@ window.addEventListener("scroll", function () {
 //resume-preview-functionality
 document.addEventListener("DOMContentLoaded", function() {
   const previewContainer = document.getElementById("pdf-preview-container");
-  const pdfIframe = document.getElementById("pdf-preview"); // Targeting the iframe
+  const pdfIframe = document.getElementById("pdf-preview");
   const resumeContent = document.querySelector('.resume-content');
   const closeButton = document.querySelector('button');
-  const resumeUrl = 'assets/Saikat Dutta(RESUME OCT UPDATE).pdf'; // Store the PDF URL
+
+  // Google Drive link for embedding
+  const googleDriveUrl = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/uc?id=17_YTJppeF-da0npEI5Jd1Q5w4Qr3bcYL'; 
 
   // Ensure the preview container is hidden on page load
-  previewContainer.style.visibility = "hidden"; // Start with hidden
-  previewContainer.style.opacity = "0"; // Make it invisible initially
+  previewContainer.style.visibility = "hidden"; // Initially hidden
+  previewContainer.style.opacity = "0"; // Invisible initially
 
-  // Function to show the PDF preview
+  // Function to show the PDF preview in the iframe
   function showPDFPreview() {
-    pdfIframe.src = resumeUrl;  // Dynamically set the PDF source when the preview is shown
-    previewContainer.style.visibility = "visible";  // Make it visible
+    pdfIframe.src = googleDriveUrl;  // Set the Google Drive link for PDF preview
+    previewContainer.style.visibility = "visible";  // Make the preview visible
     previewContainer.style.opacity = "1";  // Make it fully opaque
-    previewContainer.style.pointerEvents = "auto"; // Enable interaction
+    previewContainer.style.pointerEvents = "auto"; // Enable interaction with the preview container
   }
 
-  // Function to close the preview
+  // Function to close the preview and hide it
   function closePreview() {
     previewContainer.style.visibility = "hidden";  // Hide the preview
     previewContainer.style.opacity = "0";  // Make it invisible
     previewContainer.style.pointerEvents = "none"; // Disable interaction
-    pdfIframe.src = ""; // Clear the PDF source when hidden (stop loading)
+    pdfIframe.src = ""; // Clear the iframe source when the preview is hidden
   }
 
   // Attach event listeners
@@ -127,5 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Attach the close button functionality
   closeButton.addEventListener('click', closePreview);
 });
+
+
 
 
