@@ -88,32 +88,43 @@ window.addEventListener("scroll", function () {
 });
 
 
+
+
+
+
+
 //resume-preview-functionality
 document.addEventListener("DOMContentLoaded", function() {
   const previewContainer = document.getElementById("pdf-preview-container");
+  const pdfIframe = document.getElementById("pdf-preview"); // Targeting the iframe
+  const resumeContent = document.querySelector('.resume-content');
+  const closeButton = document.querySelector('button');
+  const resumeUrl = 'assets/Saikat Dutta(RESUME OCT UPDATE).pdf'; // Store the PDF URL
 
-  // Ensure it's hidden on page load
-  previewContainer.style.visibility = "hidden"; 
-  previewContainer.style.opacity = "0"; 
+  // Ensure the preview container is hidden on page load
+  previewContainer.style.visibility = "hidden"; // Start with hidden
+  previewContainer.style.opacity = "0"; // Make it invisible initially
 
+  // Function to show the PDF preview
   function showPDFPreview() {
-    previewContainer.style.visibility = "visible"; // Make it visible
+    pdfIframe.src = resumeUrl;  // Dynamically set the PDF source when the preview is shown
+    previewContainer.style.visibility = "visible";  // Make it visible
     previewContainer.style.opacity = "1";  // Make it fully opaque
     previewContainer.style.pointerEvents = "auto"; // Enable interaction
   }
 
+  // Function to close the preview
   function closePreview() {
     previewContainer.style.visibility = "hidden";  // Hide the preview
     previewContainer.style.opacity = "0";  // Make it invisible
     previewContainer.style.pointerEvents = "none"; // Disable interaction
+    pdfIframe.src = ""; // Clear the PDF source when hidden (stop loading)
   }
 
   // Attach event listeners
-  const resumeContent = document.querySelector('.resume-content');
   resumeContent.addEventListener('click', showPDFPreview);
 
   // Attach the close button functionality
-  const closeButton = document.querySelector('button');
   closeButton.addEventListener('click', closePreview);
 });
 

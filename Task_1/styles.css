@@ -18,7 +18,6 @@
   --white: #fff;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -44,9 +43,8 @@ body {
   background-position: center; /* Start the background in the center */
   transition: background-position 0.3s ease-out; /* Smooth background movement */
 }
-a{
+a {
   text-decoration: none;
-  
 }
 
 /*---------<navbar-section>----------*/
@@ -198,9 +196,8 @@ a{
   font-weight: 400;
   line-height: normal;
   word-break: break-word; /* Prevents overflowing long words */
-  -webkit-hyphens: auto;/*Adds hyphenation for justified text in safari*/
+  -webkit-hyphens: auto; /*Adds hyphenation for justified text in safari*/
   hyphens: auto; /* Adds hyphenation for justified text */
-
 }
 
 /* -------------<skill-section>------------------------ */
@@ -470,7 +467,8 @@ a{
   gap: 10px; /* Space between the buttons */
 }
 
-.download-button, button {
+.download-button,
+button {
   background-color: var(--dark-violet);
   color: var(--white);
   padding: 10px 20px;
@@ -581,7 +579,7 @@ button:hover {
   display: block;
 }
 
-.comm label{
+.comm label {
   margin-bottom: 5px;
   color: #000;
   text-align: left;
@@ -716,6 +714,10 @@ html {
 @media only screen and (max-width: 756px) {
   /* Navbar adjustments */
   .navbar ul {
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For older versions of IE */
+    user-select: none; /* For other browsers */
     background: rgba(255, 255, 255, 0.251);
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
@@ -836,7 +838,8 @@ html {
     width: 100%;
   }
 
-  .download-button, button {
+  .download-button,
+  button {
     width: 90%; /* Buttons will take most of the screen width on small devices */
     padding: 12px; /* Larger padding for touch devices */
     font-size: 16px;
@@ -847,24 +850,22 @@ html {
     height: 80%;
   }
 
-    /* footer-section */
-    .foot {
-      flex-direction: column; /* Stack items vertically */
-      text-align: center;
-      gap: 10px; /* Add space between items */
-    }
-  
-    .foot p {
-      font-size: 25px; /* Reduce font size */
-      line-height: 1.5; /* Add spacing for readability */
-    }
-  
-    .foot i {
-      font-size: 1em;
-    }
+  /* footer-section */
+  .foot {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    gap: 10px; /* Add space between items */
+  }
+
+  .foot p {
+    font-size: 25px; /* Reduce font size */
+    line-height: 1.5; /* Add spacing for readability */
+  }
+
+  .foot i {
+    font-size: 1em;
+  }
 }
-
-
 
 /* Project Section */
 @media (max-width: 1160px) {
@@ -924,7 +925,7 @@ html {
     flex: 1 1 100%; /* Full width for Comment and Submit button */
   }
 
-  .links{
+  .links {
     display: flex;
     justify-content: baseline;
     align-items: center;
@@ -932,10 +933,8 @@ html {
   }
 }
 
-
 @media (max-width: 480px) {
-
-  .start{
+  .start {
     top: 31%;
     font-size: 30px;
     padding-bottom: 10px;
@@ -953,12 +952,10 @@ html {
     width: 100%;
   }
 
-  .download-button, button {
+  .download-button,
+  button {
     width: 90%;
     font-size: 14px;
     padding: 10px 15px;
   }
 }
-
-
-
