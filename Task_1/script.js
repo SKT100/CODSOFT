@@ -71,3 +71,9 @@ form.addEventListener('submit', e => {
     document.body.style.backgroundPosition = `center ${-scrollPosition * starSpeed}px`;
   });
   
+
+
+  app.listen(3000, '0.0.0.0', () => {
+    console.log('Server is running');
+  });
+  

@@ -42,6 +42,10 @@ body {
   background-position: center; /* Start the background in the center */
   transition: background-position 0.3s ease-out; /* Smooth background movement */
 }
+a{
+  text-decoration: none;
+  
+}
 
 /*---------<navbar-section>----------*/
 .navbar {
@@ -530,7 +534,7 @@ textarea::placeholder {
 
 input:focus,
 textarea:focus {
-  border-color: var(--dark-violet);
+  border-color: black;
   box-shadow: 0 0 10px var(--dark-violet);
 }
 
@@ -608,7 +612,7 @@ footer {
 /* ----------------css for small screens-------------- */
 
 html {
-  overflow: hidden;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 756px) {
@@ -623,7 +627,7 @@ html {
     height: 100vh;
     width: 250px;
     padding-top: 50px;
-    z-index: 2;
+    z-index: 3;
     transition: right 0.5s;
   }
 
