@@ -16,12 +16,13 @@
             <nav class="navbar">
                 <ul id="sidemenu">
                     <li class="nav-icon cross-icon"><a onclick=closeMenu() href="#"><img src="assets/cross-icon.png"
-                    alt="cross-icon" height="30px" width="30px"></a></li>
+                                alt="cross-icon" height="30px" width="30px"></a></li>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <img class="nav-icon menu-icon" src="assets/menu-planet.png" height="50px" width="50px" alt="menu-icon" onclick=openMenu()>
+                <img class="nav-icon menu-icon" src="assets/menu-planet.png" height="50px" width="50px" alt="menu-icon"
+                    onclick=openMenu()>
             </nav>
 
             <br><br><br>
@@ -81,44 +82,44 @@
 
             <section>
                 <div class="project">
-                  <span id="heading-project">
-                    <h3>Projects...</h3>
-                  </span>
-                  <div class="proj-set">
-                    <!-- Each project-item is a direct child of proj-set -->
-                    <div class="project-item">
-                        <a href="https://github.com/SKT100/CODSOFT">
-                            <img src="assets/tv-monitor.jpg" alt="project1">
-                      <div class="description">
-                        <div class="title-overlay">
-                          <h4>Portfolio Website</h4>
+                    <span id="heading-project">
+                        <h3>Projects...</h3>
+                    </span>
+                    <div class="proj-set">
+                        <!-- Each project-item is a direct child of proj-set -->
+                        <div class="project-item">
+                            <a href="https://github.com/SKT100/CODSOFT">
+                                <img src="assets/tv-monitor.jpg" alt="project1">
+                                <div class="description">
+                                    <div class="title-overlay">
+                                        <h4>Portfolio Website</h4>
+                                    </div>
+                                    <p>A personal portfolio website designed to showcase my skills and projects...</p>
+                                </div>
+                            </a>
                         </div>
-                        <p>A personal portfolio website designed to showcase my skills and projects...</p>
-                      </div>
-                        </a>
-                    </div>
-                    <div class="project-item">
-                      <img src="assets/tv-monitor.jpg" alt="project2">
-                      <div class="description">
-                        <div class="title-overlay">
-                          <h4>Landing Page</h4>
+                        <div class="project-item">
+                            <img src="assets/tv-monitor.jpg" alt="project2">
+                            <div class="description">
+                                <div class="title-overlay">
+                                    <h4>Landing Page</h4>
+                                </div>
+                                <p>A visually appealing landing page designed to promote a fictional product...</p>
+                            </div>
                         </div>
-                        <p>A visually appealing landing page designed to promote a fictional product...</p>
-                      </div>
-                    </div>
-                    <div class="project-item">
-                      <img src="assets/tv-monitor.jpg" alt="project3">
-                      <div class="description">
-                        <div class="title-overlay">
-                          <h4>Calculator Web App</h4>
+                        <div class="project-item">
+                            <img src="assets/tv-monitor.jpg" alt="project3">
+                            <div class="description">
+                                <div class="title-overlay">
+                                    <h4>Calculator Web App</h4>
+                                </div>
+                                <p>A fully functional calculator app styled with retro aesthetics...</p>
+                            </div>
                         </div>
-                        <p>A fully functional calculator app styled with retro aesthetics...</p>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </section>
-              
+            </section>
+
 
 
             <section>
@@ -126,18 +127,21 @@
                     <span id="resume-heading">
                         <h3>Resume...</h3>
                     </span>
-                    <div class="resume-content">
-                        <a href="assets/Saikat Dutta(RESUME OCT UPDATE).pdf" download>
-                            <div class="resume-link">
-                                <img src="assets/dark_button.svg" alt="button">
-                                <span class="start">
-                                    <p>Press Start</p>
-                                </span>
-                            </div>
-                        </a>
-                        <span class="des">
-                            <p>Click to download my latest resume!</p>
-                        </span>
+                    <div class="resume-content" onclick="showPDFPreview()">
+                        <div class="button-resume">
+                            <img src="assets/DNLD_button.svg" alt="Resume Background">
+                        </div>
+                        <p>Click the button to view and download my resume😊</p>
+                    </div>
+                    <!-- PDF Preview Container -->
+                    <div id="pdf-preview-container">
+                        <iframe id="pdf-preview" src="assets/Saikat Dutta(RESUME OCT UPDATE).pdf" width="100%"
+                            height="600px" title="Resume Preview"></iframe>
+                        <div class="preview-actions">
+                            <a id="download-link" href="assets/Saikat Dutta(RESUME OCT UPDATE).pdf" download
+                                class="download-button">Download Resume</a>
+                            <button onclick="closePreview()">Close</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -148,7 +152,7 @@
                         <h3>Contact me...</h3>
                     </span>
                     <div class="contact-form">
-                        
+
                         <!-- image-part -->
                         <div class="image">
                             <img src="assets/form-bg.png" alt="form-background">
@@ -174,17 +178,17 @@
                                 </div>
                                 <div class="btn_submit">
                                     <input type="submit" id="submit-button" name="submit" value="Submit">
-                                  </div>
+                                </div>
                             </form>
                         </div>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/SKT100" target="_blank"  rel="noopener noreferrer"><img src="assets/github-icon.png"
-                                alt="github"></a>
-                        <a href="https://www.instagram.com/psyc_a_t" target="_blank"  rel="noopener noreferrer"><img src="assets/ig-icon.png"
-                                alt="instagram"></a>
-                        <a href="https://www.linkedin.com/in/saikat-dutta-workprofile/" target="_blank"  rel="noopener noreferrer"><img
-                                src="assets/ln-icon.png" alt="linkedin"></a>
+                        <a href="https://github.com/SKT100" target="_blank" rel="noopener noreferrer"><img
+                                src="assets/github-icon.png" alt="github"></a>
+                        <a href="https://www.instagram.com/psyc_a_t" target="_blank" rel="noopener noreferrer"><img
+                                src="assets/ig-icon.png" alt="instagram"></a>
+                        <a href="https://www.linkedin.com/in/saikat-dutta-workprofile/" target="_blank"
+                            rel="noopener noreferrer"><img src="assets/ln-icon.png" alt="linkedin"></a>
                     </div>
                 </div>
             </section>
@@ -193,8 +197,8 @@
             <div class="foot">
                 <p>&copy;2024 Saikat. All rights reserved.</p>
                 <div class="love">
-                <p>Made with</p>
-                <img src="assets/heart pixel.png" alt="love" height="30px" width="auto">
+                    <p>Made with</p>
+                    <img src="assets/heart pixel.png" alt="love" height="30px" width="auto">
                 </div>
             </div>
         </footer>

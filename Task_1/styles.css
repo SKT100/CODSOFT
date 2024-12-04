@@ -17,6 +17,8 @@
   --dark-blue: #1a1e53;
   --white: #fff;
 }
+
+
 * {
   margin: 0;
   padding: 0;
@@ -49,6 +51,10 @@ a{
 
 /*---------<navbar-section>----------*/
 .navbar {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   padding: 40px;
   flex-wrap: wrap;
   display: flex;
@@ -97,6 +103,10 @@ a{
 
 .about {
   margin-top: 5%;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
 }
 .about h1 {
   color: #fff;
@@ -140,6 +150,10 @@ a{
 /* ---------------<about-me-section>---------------- */
 
 .about_me {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   margin-top: 20%;
   padding: 120px;
   display: flex;
@@ -183,11 +197,19 @@ a{
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  word-break: break-word; /* Prevents overflowing long words */
+  -webkit-hyphens: auto;/*Adds hyphenation for justified text in safari*/
+  hyphens: auto; /* Adds hyphenation for justified text */
+
 }
 
 /* -------------<skill-section>------------------------ */
 
 .skill {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   width: 100%;
   margin: auto;
   margin-top: 10%;
@@ -272,6 +294,10 @@ a{
 /* ---------<project-section>------------- */
 
 .project {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   padding: 30px 10%;
   margin-top: -8%;
 }
@@ -299,6 +325,7 @@ a{
 
 .project-item {
   background: var(--background-color, #33333369); /* Optional background */
+  -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   padding: 20px;
   border-radius: 8px; /* Optional rounded corners */
@@ -345,6 +372,10 @@ a{
 
 /* ----------------<resume-section>---------------- */
 .resume {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   width: 100%;
   margin: auto;
   margin-top: 12%;
@@ -383,13 +414,14 @@ a{
   object-fit: contain; /* Fit image within the container */
   transition: transform 0.3s ease; /* Smooth scaling effect */
 }
-.resume-content img:hover {
+.button-resume:hover {
   transform: scale(1.1);
 }
 
 .resume-content p {
   text-align: justify;
-  margin-bottom: 57px;
+  margin-top: 20px;
+  font-weight: bolder;
 }
 
 .start {
@@ -410,8 +442,70 @@ a{
   pointer-events: none;
 }
 
+#pdf-preview-container {
+  visibility: hidden;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; /* Allow buttons to wrap onto the next line if needed */
+  gap: 10px; /* Space between the buttons */
+}
+
+.download-button, button {
+  background-color: var(--dark-violet);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 45%; /* Ensure buttons are not too wide */
+  box-sizing: border-box;
+}
+
+.download-button:hover {
+  background-color: var(--green);
+}
+
+button {
+  background-color: var(--grey);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: var(--red);
+}
+
 /* ------------<contact-section>------------ */
 .contact {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   width: 100%;
   margin: 10% auto;
   padding: 30px 10%;
@@ -581,6 +675,10 @@ textarea:focus {
 
 /* ----------------<footer-section>---------------- */
 footer {
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For older versions of IE */
+  user-select: none; /* For other browsers */
   background-color: var(--dark-violet);
   margin-top: 86px;
   text-align: center;
@@ -619,6 +717,7 @@ html {
   /* Navbar adjustments */
   .navbar ul {
     background: rgba(255, 255, 255, 0.251);
+    -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -665,6 +764,7 @@ html {
     font-size: 30px;
     width: 100%;
     height: auto;
+    text-align: left; /* Use left alignment for smaller screens */
   }
 
   .avatar_container {
@@ -711,11 +811,6 @@ html {
     margin-bottom: 20px;
   }
 
-  .resume .start {
-    font-size: 30px;
-    padding-bottom: 10px;
-  }
-
   /* contact-section */
   .contact {
     margin-top: 100px;
@@ -727,22 +822,49 @@ html {
     margin-bottom: 20px;
   }
 
-  /* footer-section */
-  .foot {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center;
-    gap: 10px; /* Add space between items */
+  #pdf-preview-container {
+    top: 10%;
+    left: 50%;
+    width: 95%;
+    height: 65%;
+    padding: 15px;
   }
 
-  .foot p {
-    font-size: 25px; /* Reduce font size */
-    line-height: 1.5; /* Add spacing for readability */
+  .preview-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+    width: 100%;
   }
 
-  .foot i {
-    font-size: 1em;
+  .download-button, button {
+    width: 90%; /* Buttons will take most of the screen width on small devices */
+    padding: 12px; /* Larger padding for touch devices */
+    font-size: 16px;
   }
+
+  iframe {
+    width: 100%;
+    height: 80%;
+  }
+
+    /* footer-section */
+    .foot {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center;
+      gap: 10px; /* Add space between items */
+    }
+  
+    .foot p {
+      font-size: 25px; /* Reduce font size */
+      line-height: 1.5; /* Add spacing for readability */
+    }
+  
+    .foot i {
+      font-size: 1em;
+    }
 }
+
+
 
 /* Project Section */
 @media (max-width: 1160px) {
@@ -809,3 +931,34 @@ html {
     flex-wrap: wrap;
   }
 }
+
+
+@media (max-width: 480px) {
+
+  .start{
+    top: 31%;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  #pdf-preview-container {
+    width: 100%;
+    height: 60%;
+  }
+
+  iframe {
+    height: 90%; /* Adjust iframe height for very small screens */
+  }
+
+  .preview-actions {
+    width: 100%;
+  }
+
+  .download-button, button {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+
+
