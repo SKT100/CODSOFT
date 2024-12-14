@@ -4,44 +4,120 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculator</title>
+        <title>Modern Shoe Store</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <div class="container">
-            <div class="calculator">
-                <!-- buttons -->
-                 
-                <input type="text" class="value" readonly value="0">
-                <button class="num red" data-button="C"><i>C</i></button>
-                <button class="num" data-button="CE"><i>CE</i></button>
-                <button class="num" data-button="/"><i>/</i></button>
-                <button class="num" data-button="*"><i>*</i></button>
+        <header>
+            <div class="logo">ShoeHub</div>
+            <nav>
+                <a href="#hero-section">Home</a>
+                <a href="#product-section">Shop</a>
+                <a href="#about-section">About</a>
+                <a href="#contact-section">Contact</a>
+            </nav>
 
-                <button class="num" data-button="7"><i>7</i></button>
-                <button class="num" data-button="8"><i>8</i></button>
-                <button class="num" data-button="9"><i>9</i></button>
-                <button class="num" data-button="-"><i>-</i></button>
-
-                <button class="num" data-button="4"><i>4</i></button>
-                <button class="num" data-button="5"><i>5</i></button>
-                <button class="num" data-button="6"><i>6</i></button>
-                <button class="num" data-button="+"><i>+</i></button>
-
-                <button class="num" data-button="1"><i>1</i></button>
-                <button class="num" data-button="2"><i>2</i></button>
-                <button class="num" data-button="3"><i>3</i></button>
-                <button class="num equal" data-button="="><i>=</i></button>
-
-                <button class="num" data-button="0"><i>0</i></button>
-                <button class="num" data-button="00"><i>00</i></button>
-                <button class="num" data-button="."><i>.</i></button>
-
-
-
+            <div class="cart">
+                <button id="cart-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="#333"
+                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-2l1.15-6H19l1.24 6H7.17zm2.12-8H20v2H9.42l-.63-2zM6.78 4H4v2h2l2.73 8.9c.11.37.46.6.86.6H20v2H8.36c-1.14 0-2.12-.77-2.4-1.85L4.22 6H2V4h4.78z" />
+                    </svg>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
             </div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+    
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <nav>
+                <a href="#hero-section">Home</a>
+                <a href="#product-section">Shop</a>
+                <a href="#about-section">About</a>
+                <a href="#contact-section">Contact</a>
+            </nav>
         </div>
+
+        <section id="hero-section" class="hero">
+            <div class="hero-text">
+                <h1>Step into Style</h1>
+                <p>Discover the latest collection of shoes crafted for comfort and style. Perfect for any occasion!</p>
+                <button>Shop Now</button>
+            </div>
+            <img src="assets/Air-Jordan-1-Retro-High-Og-“bred-Toe”-Red-Nike-Jordan-1_-HD-Png-Download_761x440_-PngFind.svg" alt="shoes-1">
+        </section>
+
+        <section id="product-section" class="product-section">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product" data-name="Sporty Sneakers" data-price="50">
+                    <img src="assets/New Balance 530.jpeg" alt="Shoe 1">
+                    <h3>Sporty Sneakers</h3>
+                    <p class="price">$50</p>
+                    <div class="quantity-container">
+                        <label for="quantity-1">Quantity:</label>
+                        <input type="number" id="quantity-1" class="quantity-input" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Classic Loafers" data-price="70">
+                    <img src="assets/pexels-melvin-buezo-1253763-2529148.jpg" alt="Shoe 2">
+                    <h3>Classic Loafers</h3>
+                    <p class="price">$70</p>
+                    <div class="quantity-container">
+                        <label for="quantity-2">Quantity:</label>
+                        <input type="number" id="quantity-2" class="quantity-input" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Elegant Heels" data-price="80">
+                    <img src="assets/download (3).jpeg" alt="Shoe 3">
+                    <h3>Elegant Heels</h3>
+                    <p class="price">$80</p>
+                    <div class="quantity-container">
+                        <label for="quantity-3">Quantity:</label>
+                        <input type="number" id="quantity-3" class="quantity-input" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product" data-name="Trendy Boots" data-price="90">
+                    <img src="assets/New Balance 550.jpeg" alt="Shoe 4">
+                    <h3>Trendy Boots</h3>
+                    <p class="price">$90</p>
+                    <div class="quantity-container">
+                        <label for="quantity-4">Quantity:</label>
+                        <input type="number" id="quantity-4" class="quantity-input" value="1" min="1">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="about-section">
+            <div class="about-card">
+                <h2>About Us</h2>
+                <p>At ShoeHub, we bring the best footwear to meet your style and comfort needs. From sporty sneakers to
+                    elegant heels, our collection is tailored for every occasion. Our mission is to deliver premium quality
+                    shoes that match your expectations.</p>
+            </div>
+        </section>
+        
+
+        <footer id="contact-section">
+            <div class="contact-info">
+                <p>&copy; 2024 ShoeHub. All rights reserved.</p>
+                <div class="info">
+                    <p>Email: support@shoehub.com | Phone: +91 9178258521</p>
+                    <p>Address: CollegeMore, Kolkata, WB, India</p>
+                </div>
+            </div>
+        </footer>
 
         <script src="script.js"></script>
     </body>
