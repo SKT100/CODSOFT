@@ -1,1 +1,1 @@
-﻿# CODSOFT <br>For the tasks assigned by Codsoft.<br>Author- Saikat Dutta
+﻿# Mini-projects <br>For web-dev practice.<br>Author- Saikat Dutta
