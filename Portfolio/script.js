@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeButton = document.querySelector('button');
 
   // Google Drive link for embedding
-  const googleDriveUrl = 'https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/uc?id=17_YTJppeF-da0npEI5Jd1Q5w4Qr3bcYL'; 
+  const googleDriveUrl = 'https://drive.google.com/file/d/1UFofsVsU2Q4p7pSirEhLXPZdqAEVWMO3/preview?embedded=true'; 
 
   // Ensure the preview container is hidden on page load
   previewContainer.style.visibility = "hidden"; // Initially hidden
